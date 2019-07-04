@@ -7,5 +7,6 @@ import java.util.TreeMap;
 public class PublicLibraries {
 
 
-    Map<LocalDate, Books> registrationBooks = new TreeMap<>();
+    Map<LocalDate, String> registeringBooks = new TreeMap<>();
+    
 }
