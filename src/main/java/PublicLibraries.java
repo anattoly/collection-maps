@@ -1,6 +1,7 @@
 package main.java;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -23,11 +24,22 @@ public class PublicLibraries {
 
     public String getBooksOfDate(LocalDate registerDate){
 
-        String books = registeringBooks.getOrDefault(registerDate, "No books found for entered date");
+            String books = registeringBooks.getOrDefault(registerDate, "No books found for entered date");
 
         return books;
     }
 
+    public void printAllRegisterBooks() {
+        for (Map.Entry<LocalDate, String> lib : registeringBooks.entrySet()) {
+            System.out.println("Book \"" + lib.getValue() + "\"" + " has been assigned on you");
+        }
+    }
+    
+    public void printAllDateRegisterBooks() {
+        for (Map.Entry<LocalDate, String> lib : registeringBooks.entrySet()) {
+            System.out.println("You read the book on such date: " + lib.getKey());
+        }
+    }
 
 
 
