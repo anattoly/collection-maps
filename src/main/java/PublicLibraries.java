@@ -22,9 +22,7 @@ public class PublicLibraries {
     }
 
     public String getBooksOfDate(LocalDate registerDate){
-
         String books = registeringBooks.getOrDefault(registerDate, "No books found for entered date");
-
         return books;
     }
 
