@@ -21,12 +21,24 @@ public class PublicLibraries {
         registeringBooks.put(LocalDate.parse("2019-02-05"), "The Odyssey by Homer");
     }
 
-    public String getBooksOfDate(LocalDate registerDate){
-        String books = registeringBooks.getOrDefault(registerDate, "No books found for entered date");
-        return books;
+    String getBooksOfDate(LocalDate registerDate) {
+        return registeringBooks.getOrDefault(registerDate, "!!!No books found for entered date!!!");
     }
 
+    void printAllRegisterBooks() {
+        for (Map.Entry<LocalDate, String> lib : registeringBooks.entrySet()) {
+            System.out.println("\"" + lib.getValue() + "\"");
+        }
+    }
 
+    void printAllDateRegisterBooks() {
+        for (Map.Entry<LocalDate, String> lib : registeringBooks.entrySet()) {
+            System.out.println(lib.getKey());
+        }
+    }
 
+    void addBookOfNow(String book) {
+        registeringBooks.put(LocalDate.now(), book);
+    }
 
 }
