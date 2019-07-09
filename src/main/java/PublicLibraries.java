@@ -26,8 +26,9 @@ public class PublicLibraries {
     }
 
     void printAllRegisterBooks() {
-        for (Map.Entry<LocalDate, String> lib : registeringBooks.entrySet()) {
-            System.out.println("\"" + lib.getValue() + "\"");
+        for (Map.Entry<LocalDate, String> libs : registeringBooks.entrySet()) {
+            System.out.println("\"" + libs.getValue() + "\"");
+
         }
     }
 
