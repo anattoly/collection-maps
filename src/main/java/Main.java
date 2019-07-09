@@ -22,7 +22,6 @@ public class Main {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("============Please input date in format \"DD.MM.YYYY\"==========");
 
-
         boolean checkDateFormat = false;
         while (checkDateFormat == false) {
             try {
@@ -31,7 +30,6 @@ public class Main {
 
                 System.out.println(pbLibraries.getBooksOfDate(regisrDate));
                 checkDateFormat = true;
-
 
             } catch (DateTimeParseException o) {
                 System.out.println("!!!You entered date incorrect format, please input date in format \"DD.MM.YYYY\"!!!");
