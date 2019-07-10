@@ -23,7 +23,7 @@ public class Main {
         System.out.println("============Please input date in format \"DD.MM.YYYY\"==========");
 
         boolean checkDateFormat = false;
-        while (checkDateFormat == false) {
+        while (!checkDateFormat) {
             try {
                 String date = reader.readLine();
                 LocalDate regisrDate = LocalDate.parse(date, DateTimeFormatter.ofPattern("dd.MM.yyyy"));
